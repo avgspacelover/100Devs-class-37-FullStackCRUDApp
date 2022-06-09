@@ -11,7 +11,7 @@ app.use(express.static('public'))
 
 app.use(bodyParser.json())
 
-let connectionString = 'mongodb+srv://antariksh:Broadsword%247@cluster-100devs-crud.be0fd.mongodb.net/?retryWrites=true&w=majority'
+let connectionString = 'mongodb+srv://antariksh:<password>@cluster-100devs-crud.be0fd.mongodb.net/?retryWrites=true&w=majority'
 
 MongoClient.connect(connectionString, { useUnifiedTopology: true })
   .then(client => {
@@ -81,7 +81,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
             if (result.deletedCount === 0) {
                 return res.json('No quote to delete')
             }
-            
+
             res.json(`Deleted Darth Vadar's quote`)
         })
         .catch(error => console.error(error))
@@ -93,3 +93,4 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
   })
 
 
+// https://zellwk.com/blog/crud-express-mongodb/
