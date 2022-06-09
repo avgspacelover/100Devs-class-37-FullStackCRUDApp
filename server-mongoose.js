@@ -87,13 +87,13 @@ ryusearch.specials = [
   'Tatsumaki Senpukyaku'
 ]
 
-const doc = await ryu.save()
-console.log(doc)
+const doc5 = await ryu.save()
+console.log(doc5)
 
 // alternative way
 
 
-const doc = await Character.findOneAndUpdate(
+const doc4 = await Character.findOneAndUpdate(
     { name: 'Ryu' },
     {
       specials: [
@@ -103,7 +103,7 @@ const doc = await Character.findOneAndUpdate(
       ]
     })
   
-  console.log(doc)
+  console.log(doc4)
 
 
 // deleting
